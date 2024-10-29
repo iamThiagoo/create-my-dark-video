@@ -1,5 +1,6 @@
 <template>
-    <main class="min-h-screen">
+    <main class="w-full min-h-screen">
         <Header />
+        <Footer />
     </main>
 </template>
