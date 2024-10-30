@@ -1,6 +1,20 @@
-# Nuxt Minimal Starter
+# 🎥 Create My Dark Video
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+O projeto desenvolvido é um modelo 3D do Sistema Solar, ajustando-se ao tema proposto ao fornecer informações sobre objetos próximos ao planeta Terra, bem como sobre todo o Sistema Solar com todos os seus detalhes. O projeto é importante porque permite que estudantes, que não têm a oportunidade de visitar planetários reais, tenham um ao seu alcance. O aplicativo pode ser utilizado por escolas e instituições com menos recursos financeiros.
+
+<div style="display: flex; gap: 15px">
+<img src="./public/img/screenshoot.png" width="49%"/>
+<img src="./public/img/screenshoot_2.png" width="49%" />
+</div>
+
+<br>
+
+Projeto Demo: https://create-my-dark-video.vercel.app
+
+## Tecnologias:
+
+- [Nuxt](https://nuxt.com/)
+- [Shadcn Ui - Vue](https://www.shadcn-vue.com/)
 
 ## Setup
 
@@ -36,40 +50,6 @@ yarn dev
 
 # bun
 bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
 ```
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.

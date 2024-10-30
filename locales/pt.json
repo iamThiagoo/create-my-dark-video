@@ -2,7 +2,13 @@
     "navbar": {
         "aboutUs": "Quem somos",
         "howItWorks": "Como funciona",
-        "selectLanguage": "Selecione uma língua"
+        "selectLanguage": "Selecione uma língua",
+
+        "howItWorksModal": {
+            "step1": "O Create My Dark Video uma aplicação impulsionada por inteligência artificial que permite criar vídeos com narrativa visual, sem voz, baseados em um input textual do usuário.",
+            "step2": "Ao inserir sua história ou roteiro, a IA analisa e interpreta o conteúdo, identificando temas e emoções para selecionar imagens que representem cada parte da narrativa. Essas imagens são então sequenciadas para contar a história visualmente, capturando a essência do enredo sem necessidade de narração falada.",
+            "step3": "A inteligência artificial torna o processo intuitivo e dinâmico, gerando um vídeo onde cada imagem ilustra a narrativa de forma envolvente e fiel ao contexto inserido pelo usuário."
+        }
     },
     "header": {
         "inDevelopmentBadge": "Projeto em Desenvolvimento: Talvez gere uns vídeos aleatórios demais 😂",

@@ -2,7 +2,13 @@
     "navbar": {
         "aboutUs": "About us",
         "howItWorks": "How it works",
-        "selectLanguage": "Select a language"
+        "selectLanguage": "Select a language",
+
+        "howItWorksModal": {
+            "step1": "Create My Dark Video is an AI-powered application that allows you to create visually narrated, voice-free videos based on a user's text input.",
+            "step2": "When you enter your story or script, the AI analyzes and interprets the content, identifying themes and emotions to select images that represent each part of the narrative. These images are then sequenced to tell the story visually, capturing the essence of the plot without spoken narration.",
+            "step3": "The artificial intelligence makes the process intuitive and dynamic, generating a video where each image illustrates the narrative in an engaging and contextually accurate way."
+        }
     },
     "header": {
         "inDevelopmentBadge": "Project in Development: It might generate some random videos 😂",
