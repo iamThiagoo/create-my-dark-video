@@ -1,0 +1,23 @@
+{
+    "navbar": {
+        "aboutUs": "About us",
+        "howItWorks": "How it works",
+        "selectLanguage": "Select a language"
+    },
+    "header": {
+        "generateYourDarkVideo": "Generate your Dark Video now",
+        "experienceFreedom": "Experience the freedom to create creative and engaging videos instantly, with the help of artificial intelligence that transforms your texts into images and memorable stories, all in a practical and accessible way!",
+        "tryNow": "Try now",
+        "letsGo": "Let's go!",
+        "simple": "Simple!",
+        "easy": "Easy!",
+        "fast": "Fast!",
+        "creative": "Creative!",
+        "intuitive": "Intuitive!",
+        "fun": "Fun!",
+        "accessible": "Accessible!",
+        "dynamic": "Dynamic!",
+        "agile": "Agile!",
+        "practical": "Practical!"
+    }
+}

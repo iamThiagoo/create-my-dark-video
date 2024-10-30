@@ -1,0 +1,23 @@
+{
+    "navbar": {
+        "aboutUs": "Quiénes somos",
+        "howItWorks": "Cómo funciona",
+        "selectLanguage": "Selecione uma língua"
+    },
+    "header": {
+        "generateYourDarkVideo": "Generar tu Dark Video ahora",
+        "experienceFreedom": "¡Experimenta la libertad de crear videos creativos y envolventes al instante, con la ayuda de inteligencia artificial que transforma tus textos en imágenes e historias memorables, de manera práctica y accesible!",
+        "tryNow": "Probar ahora",
+        "letsGo": "¡Vamos allá!",
+        "simple": "¡Simple!",
+        "easy": "¡Fácil!",
+        "fast": "¡Rápido!",
+        "creative": "¡Creativo!",
+        "intuitive": "¡Intuitivo!",
+        "fun": "¡Divertido!",
+        "accessible": "¡Accesible!",
+        "dynamic": "¡Dinámico!",
+        "agile": "¡Ágil!",
+        "practical": "¡Práctico!"
+    }
+}

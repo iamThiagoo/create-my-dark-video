@@ -1,25 +1,3 @@
-<script setup lang="ts">
-import {
-    NavigationMenu,
-    NavigationMenuContent,
-    NavigationMenuItem,
-    NavigationMenuLink,
-    NavigationMenuList,
-    NavigationMenuTrigger,
-    navigationMenuTriggerStyle,
-} from '@/components/ui/navigation-menu'
-
-import {
-  Select,
-  SelectContent,
-  SelectGroup,
-  SelectItem,
-  SelectLabel,
-  SelectTrigger,
-  SelectValue,
-} from '@/components/ui/select'
-</script>
-
 <template>
     <NavigationMenu class="fixed top-0 w-full pt-5 bg-white/50">
         <NavigationMenuList class="flex items-center justify-between w-full px-4">
@@ -29,34 +7,34 @@ import {
 
             <div class="flex items-center gap-x-8">
                 <NavigationMenuLink href="/" class="hover:opacity-60">
-                    Quem somos
+                    {{ $t('navbar.aboutUs') }}
                 </NavigationMenuLink>
                 <NavigationMenuLink href="/" class="hover:opacity-60">
-                    Como funciona
+                    {{ $t('navbar.howItWorks') }}
                 </NavigationMenuLink>
-                <NavigationMenuLink href="/" class="hover:opacity-60">
-                    <Select class="select-none">
-                        <SelectTrigger class="w-auto">
-                            <SelectValue placeholder="Escolha uma língua"  />
+                <NavigationMenuLink href="/" class="outline-none hover:opacity-60">
+                    <Select class="outline-none" v-model="selectedLocale">
+                        <SelectTrigger class="w-auto outline-none">
+                            <SelectValue class="outline-none" :placeholder="$t('navbar.selectLanguage')" />
                         </SelectTrigger>
-                        <SelectContent>
-                            <SelectGroup>
-                                <SelectItem value="pt-br" :selected="true" class="outline-none cursor-pointer">
+                        <SelectContent class="outline-none">
+                            <SelectGroup class="outline-none">
+                                <SelectItem :selected="locale === 'pt'" value="pt" class="outline-none cursor-pointer">
                                     <span class="flex items-center gap-x-2">
                                         <NuxtImg src="/icons/pt-br.png" class="size-7" />
-                                         PT-BR
+                                        PT-BR
                                     </span>
                                 </SelectItem>
-                                <SelectItem value="en-us" class="flex outline-none cursor-pointer" >
+                                <SelectItem :selected="locale === 'en'" value="en" class="flex outline-none cursor-pointer">
                                     <span class="flex items-center gap-x-2">
                                         <NuxtImg src="/icons/en.png" class="size-7" />
-                                         EN
+                                        EN
                                     </span>
                                 </SelectItem>
-                                <SelectItem value="es" class="flex outline-none cursor-pointer">
+                                <SelectItem :selected="locale === 'es'" value="es" class="flex outline-none cursor-pointer">
                                     <span class="flex items-center gap-x-2">
                                         <NuxtImg src="/icons/es.png" class="size-7" />
-                                        ES 
+                                        ES
                                     </span>
                                 </SelectItem>
                             </SelectGroup>
@@ -80,3 +58,36 @@ import {
         </NavigationMenuList>
     </NavigationMenu>
 </template>
+
+<script setup lang="ts">
+import {
+    NavigationMenu,
+    NavigationMenuContent,
+    NavigationMenuItem,
+    NavigationMenuLink,
+    NavigationMenuList,
+    NavigationMenuTrigger,
+} from '@/components/ui/navigation-menu';
+
+import {
+    Select,
+    SelectContent,
+    SelectGroup,
+    SelectItem,
+    SelectTrigger,
+    SelectValue,
+} from '@/components/ui/select';
+
+import { useI18n } from "vue-i18n";
+const { locale, setLocale } = useI18n();
+const selectedLocale = ref(locale.value);
+
+const setLang = (newLocale: string) => {
+    locale.value = newLocale;
+};
+
+watch(selectedLocale, (newLocale) => {
+    setLang(newLocale);
+});
+
+</script>

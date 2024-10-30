@@ -9,7 +9,7 @@
           <NuxtImg src="/svg/user-secret.svg" class="h-28"></NuxtImg>
           <h1
             class="relative max-w-4xl text-5xl font-bold tracking-tighter text-center text-slate-700 md:text-6xl font-regular">
-            <span>Gerar seu Dark Video agora é</span>
+            <span>{{ $t('header.generateYourDarkVideo') }}</span>
             <div class="relative mt-4 -top-32">
               <span v-for="(title, index) in titles" :key="index" :style="getTitleStyle(index)"
                 class="absolute flex justify-center w-full overflow-hidden font-bold text-center text-slate-700 md:pb-4 md:pt-1">
@@ -20,9 +20,7 @@
 
           <p
             class="relative max-w-3xl mt-16 text-lg leading-relaxed tracking-tight text-center text-slate-600 md:text-xl text-muted-foreground">
-            Experimente a liberdade de criar vídeos criativos e envolventes em instantes, com a ajuda da inteligência
-            artificial que transforma seus textos em imagens e histórias memoráveis, tudo de maneira prática e
-            acessível!
+            {{ $t('header.experienceFreedom') }}
           </p>
         </div>
 
@@ -32,11 +30,11 @@
               <TooltipTrigger>
                 <Button size="lg" class="gap-4 px-24 py-6 text-lg font-bold text-white rounded-full shadow-xl"
                   variant="outline">
-                  Testar agora
+                  {{ $t('header.tryNow') }}
                 </Button>
               </TooltipTrigger>
               <TooltipContent>
-                Bora lá, partiu!
+                {{ $t('header.letsGo') }}
               </TooltipContent>
             </Tooltip>
           </TooltipProvider>
@@ -54,25 +52,45 @@ import {
   TooltipTrigger
 } from '@/components/ui/tooltip'
 
-const titles = [
-  "Simples!",
-  "Fácil!",
-  "Rápido!",
-  "Criativo!",
-  "Intuitivo!",
-  "Divertido!",
-  "Acessível!",
-  "Dinâmico!",
-  "Ágil!",
-  "Prático!"
-];
+import { useI18n } from 'vue-i18n';
+import { watch, ref, onMounted, onBeforeUnmount } from 'vue';
+
+const { locale, t } = useI18n();
+
+const titles = ref([
+  t("header.simple"),
+  t("header.easy"),
+  t("header.fast"),
+  t("header.creative"),
+  t("header.intuitive"),
+  t("header.fun"),
+  t("header.accessible"),
+  t("header.dynamic"),
+  t("header.agile"),
+  t("header.practical")
+]);
 
 const titleNumber = ref(0);
 let timeoutId: any;
 
 const updateTitle = () => {
-  titleNumber.value = (titleNumber.value + 1) % titles.length;
+  titleNumber.value = (titleNumber.value + 1) % titles.value.length;
 };
+
+watch(locale, () => {
+  titles.value = [
+    t("header.simple"),
+    t("header.easy"),
+    t("header.fast"),
+    t("header.creative"),
+    t("header.intuitive"),
+    t("header.fun"),
+    t("header.accessible"),
+    t("header.dynamic"),
+    t("header.agile"),
+    t("header.practical")
+  ];
+});
 
 onMounted(() => {
   timeoutId = setInterval(updateTitle, 2000);
