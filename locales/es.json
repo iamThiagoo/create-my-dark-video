@@ -5,6 +5,7 @@
         "selectLanguage": "Selecione uma língua"
     },
     "header": {
+        "inDevelopmentBadge": "Proyecto en Desarrollo: Podría generar algunos videos demasiado aleatorios 😂",
         "generateYourDarkVideo": "Generar tu Dark Video ahora",
         "experienceFreedom": "¡Experimenta la libertad de crear videos creativos y envolventes al instante, con la ayuda de inteligencia artificial que transforma tus textos en imágenes e historias memorables, de manera práctica y accesible!",
         "tryNow": "Probar ahora",

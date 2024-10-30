@@ -6,6 +6,9 @@
       
       <div class="min-h-[calc(100vh-1.25rem)] flex flex-col items-center justify-center h-full gap-8 py-20 lg:py-10">
         <div class="relative flex flex-col gap-4">
+          <div class="flex justify-center">
+            <Badge class="w-fit">{{ $t('header.inDevelopmentBadge') }}</Badge>
+          </div>
           <NuxtImg src="/svg/user-secret.svg" class="h-28"></NuxtImg>
           <h1
             class="relative max-w-4xl text-5xl font-bold tracking-tighter text-center text-slate-700 md:text-6xl font-regular">
@@ -51,6 +54,8 @@ import {
   TooltipProvider,
   TooltipTrigger
 } from '@/components/ui/tooltip'
+
+import { Badge } from '@/components/ui/badge'
 
 import { useI18n } from 'vue-i18n';
 import { watch, ref, onMounted, onBeforeUnmount } from 'vue';

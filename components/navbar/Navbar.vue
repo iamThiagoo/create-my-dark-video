@@ -1,8 +1,9 @@
 <template>
     <NavigationMenu class="fixed top-0 w-full pt-5 bg-white/50">
         <NavigationMenuList class="flex items-center justify-between w-full px-4">
-            <NavigationMenuLink href="/">
+            <NavigationMenuLink href="/" class="flex items-center gap-x-3">
                 <NuxtImg src="/svg/user-secret.svg" class="h-12 hover:opacity-60"></NuxtImg>
+                <h1 class="text-lg font-medium">Create My Dark Video</h1>
             </NavigationMenuLink>
 
             <div class="flex items-center gap-x-8">
