@@ -1,7 +1,8 @@
 <template>
-    <footer class="w-full pt-10">
-        <div class="container flex items-center justify-center w-full py-5 mx-auto border-t-2 border-slate-950 text-slate-950">
-            Feito por <NuxtLink href="https://github.com/iamThiagoo" target="_blank" class="cursor-pointer text-sky-600 hover:opacity-80">&nbsp;@iamThiagoo</NuxtLink>
-        </div>
+    <footer class="flex justify-between max-w-6xl py-5 mx-auto">
+        <NuxtLink href="/" class="flex items-center gap-x-3">
+            <NuxtImg src="/svg/user-secret.svg" class="h-12 hover:opacity-60"></NuxtImg>
+        </NuxtLink>
+        <p class="mt-3 text-sm text-slate-950">© 2024 Create My Dark Video. {{ $t('footer.allRightsReserved')}}.</p>
     </footer>
 </template>

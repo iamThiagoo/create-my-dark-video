@@ -26,5 +26,8 @@
         "dynamic": "Dinâmico!",
         "agile": "Ágil!",
         "practical": "Prático!"
+    },
+    "footer": {
+        "allRightsReserved": "Todos os direitos reservados."
     }
 }
