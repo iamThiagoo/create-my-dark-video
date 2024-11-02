@@ -8,28 +8,33 @@
         <div class="flex items-center pt-8 mb-28 content">
             <section class="w-full max-w-6xl mx-auto min-h-[50vh] flex-col flex items-center justify-center">
                 <div class="flex flex-col justify-between mb-10">
-                    <div class="w-9/12 italic font-bold text-slate-600 md:text-4xl dark:text-slate-400">{{ $t('main.welcomeMessage') }} ✌️</div>
-                    <div class="w-10/12 mt-3 text-base text-slate-700 dark:text-gray-300">{{ $t('main.welcomeDescription') }}</div>
+                    <div class="w-9/12 italic font-bold text-slate-600 md:text-4xl dark:text-slate-400">{{
+                        $t('main.welcomeMessage') }} ✌️</div>
+                    <div class="w-10/12 mt-3 text-base text-slate-700 dark:text-gray-300">{{
+                        $t('main.welcomeDescription') }}</div>
                 </div>
                 <div class="flex justify-between w-full h-full gap-x-20">
                     <div class="w-full">
                         <form class="w-full">
                             <div class="grid items-center w-full gap-4">
                                 <div class="flex flex-col gap-y-4">
-                                    <Label for="prompt dark:text-slate-400" class="dark:text-slate-300">{{ $t('main.promptLabel') }}</Label>
-                                    <Textarea rows="6"
-                                        :placeholder="$t('main.promptPlaceholder')"
+                                    <Label for="prompt dark:text-slate-400" class="dark:text-slate-300">{{
+                                        $t('main.promptLabel') }}</Label>
+                                    <Textarea rows="6" :placeholder="$t('main.promptPlaceholder')"
                                         class="border outline-none border-slate-600 dark:dark-slate-200 dark:outline-none dark:bg-slate-800 dark:focus:ring-none dark:text-slate-200 dark:placeholder:text-slate-300 placeholder:text-slate-700 ring-none ring-offset-none focus:ring-none focus:outline-none focus:ring-offset-transparent" />
                                 </div>
                                 <div class="flex items-center space-x-2">
                                     <Switch id="airplane-mode" />
-                                    <Label for="airplane-mode" class="dark:text-slate-300">{{ $t('main.noAIStoryOption') }}</Label>
+                                    <Label for="airplane-mode" class="dark:text-slate-300">{{ $t('main.noAIStoryOption')
+                                        }}</Label>
                                 </div>
                                 <div class="flex w-full gap-x-5">
                                     <div class="flex flex-col w-6/12 my-3 space-y-4">
-                                        <Label for="idioma" class="dark:text-slate-300">{{ $t('main.languageLabel') }}</Label>
+                                        <Label for="idioma" class="dark:text-slate-300">{{ $t('main.languageLabel')
+                                            }}</Label>
                                         <Select class="user-select-none">
-                                            <SelectTrigger class="border-slate-600 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-200">
+                                            <SelectTrigger
+                                                class="border-slate-600 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-200">
                                                 <SelectValue :placeholder="$t('main.selectLanguage')" />
                                             </SelectTrigger>
                                             <SelectContent class="dark:bg-slate-900 dark:text-slate-300">
@@ -157,9 +162,11 @@
                                         </Select>
                                     </div>
                                     <div class="flex flex-col w-6/12 my-3 space-y-4">
-                                        <Label for="voice" class="dark:text-slate-300">{{ $t('main.voiceLabel') }}</Label>
+                                        <Label for="voice" class="dark:text-slate-300">{{ $t('main.voiceLabel')
+                                            }}</Label>
                                         <Select class="user-select-none">
-                                            <SelectTrigger class="border border-slate-600 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-200 ring-none dark:focus:outline-none dark:focus:ring-0">
+                                            <SelectTrigger
+                                                class="border border-slate-600 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-200 ring-none dark:focus:outline-none dark:focus:ring-0">
                                                 <SelectValue :placeholder="$t('main.selectVoice')" />
                                             </SelectTrigger>
                                             <SelectContent>
