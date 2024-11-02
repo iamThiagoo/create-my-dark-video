@@ -27,7 +27,24 @@
         "agile": "Agile!",
         "practical": "Practical!"
     },
+    "main": {
+        "welcomeMessage": "Welcome!",
+        "welcomeDescription": "Feel free to try our service! Currently, we limit video generation to 5 videos per user per day to balance costs and ensure everyone can enjoy the platform.",
+        "promptPlaceholder": "Enter your prompt or script for how you would like the video to be generated",
+        "promptLabel": "Enter a prompt or script",
+        "noAIStoryOption": "Do not generate story with AI / Keep original prompt",
+        "languageLabel": "Language",
+        "selectLanguage": "Select a narration language",
+        "voiceLabel": "Voice",
+        "selectVoice": "Select a narration model",
+        "enableSubtitle": "Enable Subtitle",
+        "autoSubtitleDescription": "Automatic subtitle generated from the audio in the selected language",
+        "myHistory": "My History",
+        "generateVideo": "Generate Video",
+        "videoDisplayMessage": "Your video will be displayed here!"
+    },
     "footer": {
-        "allRightsReserved": "All rights reserved."
+        "allRightsReserved": "All rights reserved.",
+        "madeBy": "Made by"
     }
 }

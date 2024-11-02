@@ -10,7 +10,7 @@
         <div>
             <p class="mt-3 text-sm text-slate-950 dark:text-gray-300">© 2024 Create My Dark Video. {{
                 $t('footer.allRightsReserved')}}.</p>
-            <p class="text-sm text-right text-slate-950 dark:text-gray-300">✌️ Made by <a
+            <p class="text-sm text-right text-slate-950 dark:text-gray-300">✌️ {{ $t("footer.madeBy") }} <a
                     href="https://github.com/iamThiagoo" target="_blank" class="text-sky-500">@IamThiagoo</a></p>
         </div>
     </footer>
