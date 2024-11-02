@@ -1,9 +1,6 @@
 <template>
   <div class="w-full">
-    <div class="container flex flex-col items-center justify-center w-full mx-auto">
-
-      <Navbar class="flex justify-between w-full" />
-      
+    <div class="container flex flex-col items-center justify-center w-full mx-auto">      
       <div class="min-h-[calc(100vh-1.25rem)] flex flex-col items-center justify-center h-full gap-8 py-20 lg:py-10">
         <div class="relative flex flex-col gap-4">
           <div class="flex justify-center">

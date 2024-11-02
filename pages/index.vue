@@ -1,5 +1,6 @@
 <template>
     <main class="w-full min-h-screen dark:bg-zinc-950">
+        <Navbar class="flex justify-between w-full" />
         <Header />
         <Waves />
 
@@ -18,9 +19,9 @@
                             <div class="grid items-center w-full gap-4">
                                 <div class="flex flex-col gap-y-4">
                                     <Label for="prompt dark:text-slate-400" class="dark:text-slate-300">Insira um prompt ou roteiro</Label>
-                                    <Textarea
+                                    <Textarea rows="6"
                                         placeholder="Digite aqui o seu prompt ou roteiro de como vocë gostaria que o vídeo fosse gerado"
-                                        class="border outline-none dark:dark-slate-200 dark:outline-none dark:bg-slate-800 dark:focus:ring-none dark:text-slate-200 dark:placeholder:text-slate-700 placeholder:text-slate-700 ring-none ring-offset-none focus:ring-none focus:outline-none focus:ring-offset-transparent" />
+                                        class="border outline-none border-slate-600 dark:dark-slate-200 dark:outline-none dark:bg-slate-800 dark:focus:ring-none dark:text-slate-200 dark:placeholder:text-slate-300 placeholder:text-slate-700 ring-none ring-offset-none focus:ring-none focus:outline-none focus:ring-offset-transparent" />
                                 </div>
                                 <div class="flex items-center space-x-2">
                                     <Switch id="airplane-mode" />
@@ -200,23 +201,25 @@
                                         </p>
                                     </div>
                                 </div>
-                                <Button type="submit"
-                                    class="py-6 text-white border rounded-lg dark:bg-slate-800 dark:text-white dark:hover:bg-slate-600">
-                                    <font-awesome-icon :icon="['fas', 'play']" />
-                                    Gerar Vídeo
-                                </Button>
-                                <Button type="submit"
-                                    class="py-6 text-white border rounded-lg bg-gray-50 dark:bg-gray-100 hover:bg-slate-600 hover:bg-slate-500">
-                                    <font-awesome-icon :icon="['fas', 'clock-rotate-left']" />
-                                    Meu Histórico
-                                </Button>
+                                <div class="flex w-full gap-x-2">
+                                    <Button type="submit"
+                                        class="w-full py-6 text-white bg-gray-100 border border-gray-300 rounded-lg shadow-lg hover:bg-gray-100/50 text-slate-500 dark:bg-gray-100 dark:hover:bg-slate-300">
+                                        <font-awesome-icon :icon="['fas', 'clock-rotate-left']" />
+                                        Meu Histórico
+                                    </Button>
+                                    <Button type="submit"
+                                        class="w-full py-6 text-white border rounded-lg shadow-lg dark:bg-slate-800 dark:text-white dark:hover:bg-slate-600">
+                                        <font-awesome-icon :icon="['fas', 'play']" />
+                                        Gerar Vídeo
+                                    </Button>
+                                </div>
                             </div>
                         </form>
                     </div>
 
                     <div class="h-auto w-[450px]">
                         <div
-                            class="flex flex-col items-center justify-center h-full mt-5 text-center border-2 border-dashed rounded w-[450px] border-slate-400 hover:opacity-90">
+                            class="flex flex-col items-center justify-center h-full text-center mt-1 border-2 border-dashed rounded w-[450px] border-slate-400 hover:opacity-90">
                             <div>
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
                                     class="mb-5 size-16 fill-slate-600 dark:fill-slate-300">

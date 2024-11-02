@@ -1,5 +1,5 @@
 <template>
-    <NavigationMenu class="fixed top-0 w-full pt-5 bg-white/50 dark:bg-slate-950/50">
+    <NavigationMenu class="fixed top-0 w-full pt-5">
         <NavigationMenuList class="flex items-center justify-between w-full px-4">
             <NavigationMenuLink href="/" class="flex items-center gap-x-3">
                 <svg class="h-12 hover:opacity-60 dark:fill-slate-300" viewBox="0 0 14 14" role="img" focusable="false"
@@ -20,7 +20,7 @@
                         </DialogTrigger>
                         <DialogContent class="sm:max-w-[600px] bg-white dark:bg-white dark:bg-slate-900">
                             <DialogHeader>
-                                <DialogTitle>{{ $t('navbar.howItWorks') }}</DialogTitle>
+                                <DialogTitle class="text-2xl dark:text-slate-400">{{ $t('navbar.howItWorks') }}</DialogTitle>
                                 <div class="mt-4 dark:text-white">
                                     <p class="dark:text-white">{{ $t('navbar.howItWorksModal.step1') }}</p><br>
                                     <p class="dark:text-white">{{ $t('navbar.howItWorksModal.step2') }}</p><br>
