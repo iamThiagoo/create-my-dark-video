@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full min-h-screen">
+  <div class="w-full">
     <div class="container flex flex-col items-center justify-center w-full mx-auto">
 
       <Navbar class="flex justify-between w-full" />

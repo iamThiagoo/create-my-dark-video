@@ -10,7 +10,7 @@
                 <NavigationMenuLink class="hover:opacity-60">
                     <Dialog>
                         <DialogTrigger as-child>
-                            <Button class="p-0 text-base shadow-none bg-none dark:bg-white">
+                            <Button class="p-0 text-base shadow-none bg-none dark:bg-transparent">
                                 {{ $t('navbar.howItWorks') }}
                             </Button>
                         </DialogTrigger>

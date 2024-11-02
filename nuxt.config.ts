@@ -11,15 +11,15 @@ export default defineNuxtConfig({
   ],
   googleFonts: {
     families: {
-      'Poppins': true, 
+      'Poppins': true,
     },
     display: 'swap',
   },
   i18n: {
     locales: [
-      { code: 'en', name: 'English',   file: 'en.json' },
+      { code: 'en', name: 'English', file: 'en.json' },
       { code: 'pt', name: 'Português', file: 'pt.json' },
-      { code: 'es', name: 'Espanhol',  file: 'es.json' },
+      { code: 'es', name: 'Espanhol', file: 'es.json' },
     ],
     defaultLocale: 'pt',
     langDir: 'locales/',
@@ -28,5 +28,5 @@ export default defineNuxtConfig({
   shadcn: {
     prefix: '',
     componentDir: './components/ui'
-  }
+  },
 })
