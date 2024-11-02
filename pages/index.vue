@@ -1,5 +1,5 @@
 <template>
-    <main class="w-full min-h-screen">
+    <main class="w-full min-h-screen dark:bg-zinc-950">
         <Header />
         <Waves />
 
@@ -7,8 +7,8 @@
         <div class="flex items-center pt-8 mb-28 content">
             <section class="w-full max-w-6xl mx-auto min-h-[50vh] flex-col flex items-center justify-center">
                 <div class="flex flex-col justify-between mb-10">
-                    <div class="w-9/12 italic font-bold text-slate-600 md:text-4xl">Seja bem-vindo! ✌️</div>
-                    <div class="w-10/12 mt-3 text-base text-slate-700">Sinta-se à vontade para experimentar nosso
+                    <div class="w-9/12 italic font-bold text-slate-600 md:text-4xl dark:text-slate-400">Seja bem-vindo! ✌️</div>
+                    <div class="w-10/12 mt-3 text-base text-slate-700 dark:text-gray-300">Sinta-se à vontade para experimentar nosso
                         serviço! Atualmente, limitamos a geração a 5 vídeos diários por usuário para manter o equilíbrio
                         nos custos e garantir que todos possam aproveitar a plataforma.</div>
                 </div>
@@ -17,23 +17,23 @@
                         <form class="w-full">
                             <div class="grid items-center w-full gap-4">
                                 <div class="flex flex-col gap-y-4">
-                                    <Label for="prompt">Insira um prompt ou roteiro</Label>
+                                    <Label for="prompt dark:text-slate-400" class="dark:text-slate-300">Insira um prompt ou roteiro</Label>
                                     <Textarea
                                         placeholder="Digite aqui o seu prompt ou roteiro de como vocë gostaria que o vídeo fosse gerado"
-                                        class="outline-none dark:outline-none dark:bg-white text-slate-800 dark:placeholder:text-slate-700 placeholder:text-slate-700 ring-none ring-offset-none focus:ring-none focus:outline-none focus:ring-offset-transparent" />
+                                        class="border outline-none dark:dark-slate-200 dark:outline-none dark:bg-slate-800 dark:focus:ring-none dark:text-slate-200 dark:placeholder:text-slate-700 placeholder:text-slate-700 ring-none ring-offset-none focus:ring-none focus:outline-none focus:ring-offset-transparent" />
                                 </div>
                                 <div class="flex items-center space-x-2">
                                     <Switch id="airplane-mode" />
-                                    <Label for="airplane-mode">Não gerar história com IA/Manter prompt original</Label>
+                                    <Label for="airplane-mode" class="dark:text-slate-300">Não gerar história com IA/Manter prompt original</Label>
                                 </div>
                                 <div class="flex w-full gap-x-5">
                                     <div class="flex flex-col w-6/12 my-3 space-y-4">
-                                        <Label for="idioma">Idioma</Label>
+                                        <Label for="idioma" class="dark:text-slate-300">Idioma</Label>
                                         <Select class="user-select-none">
-                                            <SelectTrigger class="border-slate-600 dark:border-slate-600">
+                                            <SelectTrigger class="border-slate-600 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-200">
                                                 <SelectValue placeholder="Selecione um idioma para narração" />
                                             </SelectTrigger>
-                                            <SelectContent>
+                                            <SelectContent class="dark:bg-slate-900 dark:text-slate-300">
                                                 <SelectGroup>
                                                     <SelectItem value="arabic">
                                                         Árabe
@@ -158,13 +158,13 @@
                                         </Select>
                                     </div>
                                     <div class="flex flex-col w-6/12 my-3 space-y-4">
-                                        <Label for="voice">Voz</Label>
+                                        <Label for="voice" class="dark:text-slate-300">Voz</Label>
                                         <Select class="user-select-none">
-                                            <SelectTrigger class="border-slate-600 dark:border-slate-600">
+                                            <SelectTrigger class="border border-slate-600 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-200 ring-none dark:focus:outline-none dark:focus:ring-0">
                                                 <SelectValue placeholder="Selecione um modelo para narração" />
                                             </SelectTrigger>
                                             <SelectContent>
-                                                <SelectGroup>
+                                                <SelectGroup class="dark:bg-slate-900 dark:text-slate-300">
                                                     <SelectItem value="alloy">
                                                         Alloy
                                                     </SelectItem>
@@ -192,10 +192,10 @@
                                     <Checkbox id="terms1" />
                                     <div class="grid gap-1.5 leading-none">
                                         <label for="terms1"
-                                            class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70">
+                                            class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 dark:text-slate-400">
                                             Habilitar legenda
                                         </label>
-                                        <p class="text-xs text-slate-800">
+                                        <p class="text-xs text-slate-800 dark:text-slate-400">
                                             Legenda automática gerada a partir do áudio com o idioma escolhido
                                         </p>
                                     </div>
@@ -219,12 +219,12 @@
                             class="flex flex-col items-center justify-center h-full mt-5 text-center border-2 border-dashed rounded w-[450px] border-slate-400 hover:opacity-90">
                             <div>
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
-                                    class="mb-5 size-16 fill-slate-600">
+                                    class="mb-5 size-16 fill-slate-600 dark:fill-slate-300">
                                     <path
                                         d="M0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zM188.3 147.1c-7.6 4.2-12.3 12.3-12.3 20.9l0 176c0 8.7 4.7 16.7 12.3 20.9s16.8 4.1 24.3-.5l144-88c7.1-4.4 11.5-12.1 11.5-20.5s-4.4-16.1-11.5-20.5l-144-88c-7.4-4.5-16.7-4.7-24.3-.5z" />
                                 </svg>
                             </div>
-                            <span class="text-slate-800">Seu vídeo será exibido aqui!</span>
+                            <span class="text-slate-800 dark:text-slate-300">Seu vídeo será exibido aqui!</span>
                         </div>
                     </div>
                 </div>
