@@ -1,5 +1,5 @@
 <template>
-    <div class="relative header -top-20">
+    <div class="relative header -top-2 sm:-top-20">
         <div>
             <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                 viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">

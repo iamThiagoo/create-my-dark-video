@@ -5,15 +5,15 @@
         <Waves></Waves>
 
         <!--Content starts-->
-        <div class="flex items-center pt-8 mb-28 content">
-            <section class="w-full max-w-6xl mx-auto min-h-[50vh] flex-col flex items-center justify-center">
-                <div class="flex flex-col justify-between mb-10">
-                    <div class="w-9/12 italic font-bold text-slate-600 md:text-4xl dark:text-slate-400">{{
-                        $t('main.welcomeMessage') }} ✌️</div>
-                    <div class="w-10/12 mt-3 text-base text-slate-700 dark:text-gray-300">{{
+        <div class="flex items-center px-4 pt-8 mb-6 sm:px-0 sm:mb-28 content">
+            <section class="w-full sm:max-w-6xl mx-auto min-h-[50vh] flex-col flex items-center justify-center">
+                <div class="flex flex-col justify-between mb-8 sm:mb-10">
+                    <div class="w-9/12 text-2xl italic font-bold text-slate-600 md:text-4xl dark:text-slate-400">{{
+                        $t('main.welcomeMessage') }} 👋</div>
+                    <div class="w-full mt-3 text-sm text-justify sm:text-left sm:w-10/12 sm:text-base text-slate-700 dark:text-gray-300">{{
                         $t('main.welcomeDescription') }}</div>
                 </div>
-                <div class="flex justify-between w-full h-full gap-x-20">
+                <div class="flex flex-col justify-between w-full h-full sm:flex-row gap-x-20 gap-y-8 sm:gap-y-0">
                     <div class="w-full">
                         <form class="w-full" ref="form">
                             <div class="grid items-center w-full gap-4">
@@ -28,8 +28,8 @@
                                     <Label for="airplane-mode" class="dark:text-slate-300">{{ $t('main.noAIStoryOption')
                                         }}</Label>
                                 </div>
-                                <div class="flex w-full gap-x-5">
-                                    <div class="flex flex-col w-6/12 my-3 space-y-4">
+                                <div class="flex flex-col w-full gap-x-5 sm:flex-row">
+                                    <div class="flex flex-col my-3 space-y-4 sm:w-6/12">
                                         <Label for="idioma" class="dark:text-slate-300">{{ $t('main.languageLabel')
                                             }}</Label>
                                         <Select class="user-select-none">
@@ -120,7 +120,7 @@
                                             </SelectContent>
                                         </Select>
                                     </div>
-                                    <div class="flex flex-col w-6/12 my-3 space-y-4">
+                                    <div class="flex flex-col w-full my-3 space-y-4 sm:w-6/12">
                                         <Label for="voice" class="dark:text-slate-300">{{ $t('main.voiceLabel')
                                             }}</Label>
                                         <Select class="user-select-none">
@@ -165,7 +165,7 @@
                                         </p>
                                     </div>
                                 </div>
-                                <div class="flex w-full gap-x-2">
+                                <div class="flex flex-col w-full sm:flex-row gap-y-3 sm:gap-y-0 gap-x-2">
                                     <Button type="submit"
                                         class="w-full py-6 text-white bg-gray-100 border border-gray-300 rounded-lg shadow-lg hover:bg-gray-100/50 text-slate-500 dark:bg-gray-100 dark:hover:bg-slate-300">
                                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
@@ -187,9 +187,9 @@
                         </form>
                     </div>
 
-                    <div class="h-auto w-[450px]">
+                    <div class="h-auto w-full sm:w-[450px]">
                         <div
-                            class="flex flex-col items-center justify-center h-full text-center mt-1 border-2 border-dashed rounded w-[450px] border-slate-400 hover:opacity-90">
+                            class="flex flex-col items-center justify-center text-center mt-1 border-2 border-dashed rounded h-96 sm:h-full sm:w-[450px] border-slate-400 hover:opacity-90">
                             <div>
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"
                                     class="mb-5 size-16 fill-slate-600 dark:fill-slate-300">
@@ -197,7 +197,7 @@
                                         d="M0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zM188.3 147.1c-7.6 4.2-12.3 12.3-12.3 20.9l0 176c0 8.7 4.7 16.7 12.3 20.9s16.8 4.1 24.3-.5l144-88c7.1-4.4 11.5-12.1 11.5-20.5s-4.4-16.1-11.5-20.5l-144-88c-7.4-4.5-16.7-4.7-24.3-.5z" />
                                 </svg>
                             </div>
-                            <span class="text-slate-800 dark:text-slate-300">{{ $t('main.videoDisplayMessage') }}</span>
+                            <span class="text-sm sm:text-base text-slate-800 dark:text-slate-300">{{ $t('main.videoDisplayMessage') }}</span>
                         </div>
                     </div>
                 </div>
