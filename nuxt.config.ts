@@ -7,6 +7,17 @@ export default defineNuxtConfig({
       NUXT_APP_URL: process.env.NUXT_APP_URL,
     },
   },
+  app: {
+    head: {
+      link: [
+        { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+        { rel: 'apple-touch-icon', sizes: '180x180', href: '/svg/user-secret.svg' },
+        { rel: 'apple-touch-icon', sizes: '152x152', href: '/svg/user-secret.svg' },
+        { rel: 'apple-touch-icon', sizes: '120x120', href: '/svg/user-secret.svg' },
+        { rel: 'apple-touch-icon', sizes: '76x76', href: '/svg/user-secret.svg' },
+      ],
+    },
+  },
   modules: [
     '@nuxtjs/tailwindcss',
     'shadcn-nuxt',

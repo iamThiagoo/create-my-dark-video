@@ -1,7 +1,7 @@
 <template>
     <main class="w-full min-h-screen dark:bg-zinc-950">
         <Navbar class="flex justify-between w-full"></Navbar>
-        <Header></Header>
+        <Header @tryNow="scrollToForm"></Header>
         <Waves></Waves>
 
         <!--Content starts-->
@@ -15,7 +15,7 @@
                 </div>
                 <div class="flex justify-between w-full h-full gap-x-20">
                     <div class="w-full">
-                        <form class="w-full">
+                        <form class="w-full" ref="form">
                             <div class="grid items-center w-full gap-4">
                                 <div class="flex flex-col gap-y-4">
                                     <Label for="prompt dark:text-slate-400" class="dark:text-slate-300">{{
@@ -39,124 +39,83 @@
                                             </SelectTrigger>
                                             <SelectContent class="dark:bg-slate-900 dark:text-slate-300">
                                                 <SelectGroup>
-                                                    <SelectItem value="arabic">
-                                                        Árabe
+                                                    <SelectItem :value="'arabic'">{{ $t('languages.arabic') }}
                                                     </SelectItem>
-                                                    <SelectItem value="bengali">
-                                                        Bengali
+                                                    <SelectItem :value="'bengali'">{{ $t('languages.bengali') }}
                                                     </SelectItem>
-                                                    <SelectItem value="bulgarian">
-                                                        Búlgaro
+                                                    <SelectItem :value="'bulgarian'">{{ $t('languages.bulgarian') }}
                                                     </SelectItem>
-                                                    <SelectItem value="chinese">
-                                                        Chinês
+                                                    <SelectItem :value="'chinese'">{{ $t('languages.chinese') }}
                                                     </SelectItem>
-                                                    <SelectItem value="croatian">
-                                                        Croata
+                                                    <SelectItem :value="'croatian'">{{ $t('languages.croatian') }}
                                                     </SelectItem>
-                                                    <SelectItem value="czech">
-                                                        Tcheco
+                                                    <SelectItem :value="'czech'">{{ $t('languages.czech') }}
                                                     </SelectItem>
-                                                    <SelectItem value="danish">
-                                                        Dinamarquês
+                                                    <SelectItem :value="'danish'">{{ $t('languages.danish') }}
                                                     </SelectItem>
-                                                    <SelectItem value="dutch">
-                                                        Holandês
+                                                    <SelectItem :value="'dutch'">{{ $t('languages.dutch') }}
                                                     </SelectItem>
-                                                    <SelectItem value="english">
-                                                        Inglês
+                                                    <SelectItem :value="'english'">{{ $t('languages.english') }}
                                                     </SelectItem>
-                                                    <SelectItem value="finnish">
-                                                        Finlandês
+                                                    <SelectItem :value="'finnish'">{{ $t('languages.finnish') }}
                                                     </SelectItem>
-                                                    <SelectItem value="french">
-                                                        Francês
+                                                    <SelectItem :value="'french'">{{ $t('languages.french') }}
                                                     </SelectItem>
-                                                    <SelectItem value="gaelic">
-                                                        Gaélico
+                                                    <SelectItem :value="'gaelic'">{{ $t('languages.gaelic') }}
                                                     </SelectItem>
-                                                    <SelectItem value="german">
-                                                        Alemão
+                                                    <SelectItem :value="'german'">{{ $t('languages.german') }}
                                                     </SelectItem>
-                                                    <SelectItem value="greek">
-                                                        Grego
+                                                    <SelectItem :value="'greek'">{{ $t('languages.greek') }}
                                                     </SelectItem>
-                                                    <SelectItem value="hebrew">
-                                                        Hebraico
+                                                    <SelectItem :value="'hebrew'">{{ $t('languages.hebrew') }}
                                                     </SelectItem>
-                                                    <SelectItem value="hindi">
-                                                        Hindi
+                                                    <SelectItem :value="'hindi'">{{ $t('languages.hindi') }}
                                                     </SelectItem>
-                                                    <SelectItem value="hungarian">
-                                                        Húngaro
+                                                    <SelectItem :value="'hungarian'">{{ $t('languages.hungarian') }}
                                                     </SelectItem>
-                                                    <SelectItem value="icelandic">
-                                                        Islandês
+                                                    <SelectItem :value="'icelandic'">{{ $t('languages.icelandic') }}
                                                     </SelectItem>
-                                                    <SelectItem value="indonesian">
-                                                        Indonésio
+                                                    <SelectItem :value="'indonesian'">{{ $t('languages.indonesian') }}
                                                     </SelectItem>
-                                                    <SelectItem value="italian">
-                                                        Italiano
+                                                    <SelectItem :value="'italian'">{{ $t('languages.italian') }}
                                                     </SelectItem>
-                                                    <SelectItem value="japanese">
-                                                        Japonês
+                                                    <SelectItem :value="'japanese'">{{ $t('languages.japanese') }}
                                                     </SelectItem>
-                                                    <SelectItem value="korean">
-                                                        Coreano
+                                                    <SelectItem :value="'korean'">{{ $t('languages.korean') }}
                                                     </SelectItem>
-                                                    <SelectItem value="malay">
-                                                        Malaio
+                                                    <SelectItem :value="'malay'">{{ $t('languages.malay') }}
                                                     </SelectItem>
-                                                    <SelectItem value="norwegian">
-                                                        Norueguês
+                                                    <SelectItem :value="'norwegian'">{{ $t('languages.norwegian') }}
                                                     </SelectItem>
-                                                    <SelectItem value="persian">
-                                                        Persa
+                                                    <SelectItem :value="'persian'">{{ $t('languages.persian') }}
                                                     </SelectItem>
-                                                    <SelectItem value="polish">
-                                                        Polonês
+                                                    <SelectItem :value="'polish'">{{ $t('languages.polish') }}
                                                     </SelectItem>
-                                                    <SelectItem value="portuguese">
-                                                        Português
+                                                    <SelectItem :value="'portuguese'">{{ $t('languages.portuguese') }}
                                                     </SelectItem>
-                                                    <SelectItem value="romanian">
-                                                        Romeno
+                                                    <SelectItem :value="'romanian'">{{ $t('languages.romanian') }}
                                                     </SelectItem>
-                                                    <SelectItem value="russian">
-                                                        Russo
+                                                    <SelectItem :value="'russian'">{{ $t('languages.russian') }}
                                                     </SelectItem>
-                                                    <SelectItem value="serbian">
-                                                        Sérvio
+                                                    <SelectItem :value="'serbian'">{{ $t('languages.serbian') }}
                                                     </SelectItem>
-                                                    <SelectItem value="slovak">
-                                                        Eslovaco
+                                                    <SelectItem :value="'slovak'">{{ $t('languages.slovak') }}
                                                     </SelectItem>
-                                                    <SelectItem value="spanish">
-                                                        Espanhol
+                                                    <SelectItem :value="'spanish'">{{ $t('languages.spanish') }}
                                                     </SelectItem>
-                                                    <SelectItem value="swahili">
-                                                        Suaíli
+                                                    <SelectItem :value="'swahili'">{{ $t('languages.swahili') }}
                                                     </SelectItem>
-                                                    <SelectItem value="swedish">
-                                                        Sueco
+                                                    <SelectItem :value="'swedish'">{{ $t('languages.swedish') }}
                                                     </SelectItem>
-                                                    <SelectItem value="thai">
-                                                        Tailandês
+                                                    <SelectItem :value="'thai'">{{ $t('languages.thai') }}</SelectItem>
+                                                    <SelectItem :value="'turkish'">{{ $t('languages.turkish') }}
                                                     </SelectItem>
-                                                    <SelectItem value="turkish">
-                                                        Turco
+                                                    <SelectItem :value="'ukrainian'">{{ $t('languages.ukrainian') }}
                                                     </SelectItem>
-                                                    <SelectItem value="ukrainian">
-                                                        Ucraniano
+                                                    <SelectItem :value="'vietnamese'">{{ $t('languages.vietnamese') }}
                                                     </SelectItem>
-                                                    <SelectItem value="vietnamese">
-                                                        Vietnamita
+                                                    <SelectItem :value="'welsh'">{{ $t('languages.welsh') }}
                                                     </SelectItem>
-                                                    <SelectItem value="welsh">
-                                                        Galês
-                                                    </SelectItem>
-
                                                 </SelectGroup>
                                             </SelectContent>
                                         </Select>
@@ -209,12 +168,18 @@
                                 <div class="flex w-full gap-x-2">
                                     <Button type="submit"
                                         class="w-full py-6 text-white bg-gray-100 border border-gray-300 rounded-lg shadow-lg hover:bg-gray-100/50 text-slate-500 dark:bg-gray-100 dark:hover:bg-slate-300">
-                                        <font-awesome-icon :icon="['fas', 'clock-rotate-left']" />
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                            <path
+                                                d="M75 75L41 41C25.9 25.9 0 36.6 0 57.9L0 168c0 13.3 10.7 24 24 24l110.1 0c21.4 0 32.1-25.9 17-41l-30.8-30.8C155 85.5 203 64 256 64c106 0 192 86 192 192s-86 192-192 192c-40.8 0-78.6-12.7-109.7-34.4c-14.5-10.1-34.4-6.6-44.6 7.9s-6.6 34.4 7.9 44.6C151.2 495 201.7 512 256 512c141.4 0 256-114.6 256-256S397.4 0 256 0C185.3 0 121.3 28.7 75 75zm181 53c-13.3 0-24 10.7-24 24l0 104c0 6.4 2.5 12.5 7 17l72 72c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-65-65 0-94.1c0-13.3-10.7-24-24-24z" />
+                                        </svg>
                                         {{ $t('main.myHistory') }}
                                     </Button>
                                     <Button type="submit"
-                                        class="w-full py-6 text-white border rounded-lg shadow-lg dark:bg-slate-800 dark:text-white dark:hover:bg-slate-600">
-                                        <font-awesome-icon :icon="['fas', 'play']" />
+                                        class="w-full py-6 text-white border rounded-lg shadow-lg fill-white dark:bg-slate-800 dark:text-white dark:hover:bg-slate-600">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                                            <path
+                                                d="M73 39c-14.8-9.1-33.4-9.4-48.5-.9S0 62.6 0 80L0 432c0 17.4 9.4 33.4 24.5 41.9s33.7 8.1 48.5-.9L361 297c14.3-8.7 23-24.2 23-41s-8.7-32.2-23-41L73 39z" />
+                                        </svg>
                                         {{ $t('main.generateVideo') }}
                                     </Button>
                                 </div>
@@ -249,5 +214,14 @@
 import { Checkbox } from '@/components/ui/checkbox'
 import { Label } from '@/components/ui/label'
 import { Switch } from '@/components/ui/switch'
+
+const form = ref(null)
+
+const scrollToForm = () => {
+    form.value?.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+    });
+}
 
 </script>
