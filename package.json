@@ -16,6 +16,8 @@
     "@nuxtjs/color-mode": "^3.5.2",
     "@nuxtjs/google-fonts": "^3.2.0",
     "@nuxtjs/i18n": "^8.5.5",
+    "@radix-icons/vue": "^1.0.0",
+    "@vee-validate/nuxt": "^4.14.6",
     "@vueuse/core": "^11.2.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
@@ -25,13 +27,15 @@
     "shadcn-nuxt": "^0.10.4",
     "tailwind-merge": "^2.5.4",
     "vue": "latest",
-    "vue-router": "latest"
+    "vue-router": "latest",
+    "yup": "^1.4.0"
   },
   "devDependencies": {
     "@fortawesome/free-brands-svg-icons": "^6.6.0",
     "@fortawesome/free-regular-svg-icons": "^6.6.0",
     "@fortawesome/free-solid-svg-icons": "^6.6.0",
     "@nuxtjs/tailwindcss": "^6.12.2",
+    "ofetch": "^1.4.1",
     "prettier": "^3.3.3",
     "typescript": "^5.6.3"
   }

@@ -2,6 +2,7 @@
   <div>
     <NuxtLayout>
       <NuxtPage />
+      <Toaster />
     </NuxtLayout>
   </div>
 </template>
@@ -9,6 +10,7 @@
 <script setup lang="ts">
 
 const runtimeConfig = useRuntimeConfig()
+import Toaster from '@/components/ui/toast/Toaster.vue'
 
 useHead({
   title: 'Gere seu Dark Video em segundos',
