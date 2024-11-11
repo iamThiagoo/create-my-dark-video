@@ -1,7 +1,9 @@
+import CsrfService from "~/services/csrf";
 import VideoService from "~/services/video";
 
 interface IHttp {
     video: VideoService;
+    csrf: CsrfService;
 }
 
 export default defineNuxtPlugin(() => {
@@ -12,6 +14,7 @@ export default defineNuxtPlugin(() => {
 
     const httpServices: IHttp = {
         video: new VideoService(fetcher),
+        csrf: new CsrfService(fetcher),
     };
 
     return {

@@ -1,5 +1,5 @@
 <template>
-    <footer class="flex flex-col items-center max-w-6xl pb-8 mx-auto sm:pb-0 sm:py-5 sm:justify-between sm:flex-row">
+    <footer class="flex flex-col items-center h-auto max-w-6xl pb-8 mx-auto sm:pb-8 sm:justify-between sm:flex-row">
         <NuxtLink href="/" class="flex items-center gap-x-3">
             <svg class="h-12 hover:opacity-60 dark:fill-slate-300" viewBox="0 0 14 14" role="img" focusable="false"
                 aria-hidden="true" xmlns="http://www.w3.org/2000/svg">

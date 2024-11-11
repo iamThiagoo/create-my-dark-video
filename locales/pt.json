@@ -41,7 +41,14 @@
         "autoSubtitleDescription": "Legenda automática gerada a partir do áudio com o idioma escolhido",
         "myHistory": "Meu Histórico",
         "generateVideo": "Gerar Vídeo",
-        "videoDisplayMessage": "Seu vídeo será exibido aqui!"
+        "videoDisplayMessage": "Seu vídeo será exibido aqui!",
+        "generatingVideo": "Seu vídeo está sendo gerado",
+        "pleaseInsertPrompt": "Por favor, insira um prompt ou roteiro para continuar.",
+        "videoGenerationInProgress": "Um video já está sendo gerado, aguarde até que ele termine.",
+        "tryAgainContactUs": "Tente novamente, se não funcionar, entre em contato conosco :)",
+        "unexpectedError": "Uh oh! Aconteceu um erro inesperado...",
+        "browserNotSupported": "Seu navegador não suporta a tag de vídeo.",
+        "generateAgain": "Gerar novamente"
     },
     "footer": {
         "allRightsReserved": "Todos os direitos reservados.",

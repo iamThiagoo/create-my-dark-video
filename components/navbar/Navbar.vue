@@ -90,12 +90,13 @@
                 <NavigationMenuLink class="flex justify-center w-8 hover:opacity-60">
                     <svg v-if="$colorMode.preference == 'system' || $colorMode.preference == 'light'"
                         @click="$colorMode.preference = 'dark'" xmlns="http://www.w3.org/2000/svg" fill="none"
-                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="cursor-pointer size-8">
+                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                        class="cursor-pointer size-8 dark:fill-white">
                         <path stroke-linecap="round" stroke-linejoin="round"
                             d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" />
                     </svg>
-                    <svg viewBox="0 0 15 15" v-else @click="$colorMode.preference = 'light'"
-                        class="cursor-pointer size-7 text-foreground dark:fill-white">
+                    <svg v-else viewBox="0 0 15 15" @click="$colorMode.preference = 'light'" stroke-width=".1"
+                        stroke="#fff" class="cursor-pointer size-7 text-foreground dark:fill-white">
                         <path fill-rule="evenodd"
                             d="M2.9.5a.4.4 0 0 0-.8 0v.6h-.6a.4.4 0 1 0 0 .8h.6v.6a.4.4 0 1 0 .8 0v-.6h.6a.4.4 0 0 0 0-.8h-.6zm3 3a.4.4 0 1 0-.8 0v.6h-.6a.4.4 0 1 0 0 .8h.6v.6a.4.4 0 1 0 .8 0v-.6h.6a.4.4 0 0 0 0-.8h-.6zm-4 3a.4.4 0 1 0-.8 0v.6H.5a.4.4 0 1 0 0 .8h.6v.6a.4.4 0 0 0 .8 0v-.6h.6a.4.4 0 0 0 0-.8h-.6zM8.544.982l-.298-.04c-.213-.024-.34.224-.217.4q.211.305.389.632A6.602 6.602 0 0 1 2.96 11.69c-.215.012-.334.264-.184.417q.103.105.21.206l.072.066l.26.226l.188.148l.121.09l.187.131l.176.115q.18.115.37.217l.264.135l.26.12l.303.122l.244.086a6.6 6.6 0 0 0 1.103.26l.317.04l.267.02q.19.011.384.011a6.6 6.6 0 0 0 6.56-7.339l-.038-.277a6.6 6.6 0 0 0-.384-1.415l-.113-.268l-.077-.166l-.074-.148a6.6 6.6 0 0 0-.546-.883l-.153-.2l-.199-.24l-.163-.18l-.12-.124l-.16-.158l-.223-.2l-.32-.26l-.245-.177l-.292-.19l-.321-.186l-.328-.165l-.113-.052l-.24-.101l-.276-.104l-.252-.082l-.325-.09l-.265-.06zm1.86 4.318a7.6 7.6 0 0 0-.572-2.894a5.601 5.601 0 1 1-4.748 10.146a7.6 7.6 0 0 0 3.66-2.51a.749.749 0 0 0 1.355-.442a.75.75 0 0 0-.584-.732q.093-.174.178-.355A1.25 1.25 0 1 0 10.35 6.2q.052-.442.052-.9"
                             clip-rule="evenodd"></path>
@@ -116,17 +117,6 @@
 <script setup lang="ts">
 
 import { Button } from '@/components/ui/button'
-import {
-    AlertDialog,
-    AlertDialogAction,
-    AlertDialogCancel,
-    AlertDialogContent,
-    AlertDialogDescription,
-    AlertDialogFooter,
-    AlertDialogHeader,
-    AlertDialogTitle,
-    AlertDialogTrigger,
-} from '@/components/ui/alert-dialog'
 
 import {
     NavigationMenu,

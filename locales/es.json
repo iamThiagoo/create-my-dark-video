@@ -41,7 +41,14 @@
         "autoSubtitleDescription": "Subtítulo automático generado a partir del audio en el idioma seleccionado",
         "myHistory": "Mi Historial",
         "generateVideo": "Generar Video",
-        "videoDisplayMessage": "¡Su video se mostrará aquí!"
+        "videoDisplayMessage": "¡Su video se mostrará aquí!",
+        "generatingVideo": "Su video está siendo generado",
+        "pleaseInsertPrompt": "Por favor, ingrese un prompt o guion para continuar.",
+        "videoGenerationInProgress": "Ya se está generando un video, espere a que termine.",
+        "tryAgainContactUs": "Intente de nuevo, si no funciona, contáctenos :)",
+        "unexpectedError": "¡Vaya! Ocurrió un error inesperado...",
+        "browserNotSupported": "Su navegador no es compatible con la etiqueta de video.",
+        "generateAgain": "Generar nuevamente"
     },
     "footer": {
         "allRightsReserved": "Todos los derechos reservados.",
